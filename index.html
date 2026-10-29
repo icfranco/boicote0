@@ -214,6 +214,11 @@ h2.d em{background:linear-gradient(#0b0b0b,#0b0b0b) 0 .03em/100% 1.35em no-repea
 .hero{padding-top:calc(clamp(1rem,5vw,3rem) + clamp(88px,16vw,150px) + .75rem)}
 .stamp{line-height:1.2}
 .sign{line-height:1.2}
+/* correção v3: risco que acompanha cada linha do texto (e não o bloco inteiro) */
+.sk{display:inline;position:static;background:linear-gradient(var(--ac),var(--ac)) 0 50%/0 .12em no-repeat;transition:background-size .8s .5s cubic-bezier(.7,0,.2,1);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.sk::after{content:none}
+.in .sk{background-size:100% .12em}
+@media(prefers-reduced-motion:reduce){.sk{background-size:100% .12em}}
 </style>
 <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
 <script defer src="/_vercel/insights/script.js"></script>
@@ -280,7 +285,7 @@ h2.d em{background:linear-gradient(#0b0b0b,#0b0b0b) 0 .03em/100% 1.35em no-repea
 
 <section class="inv" id="ct">
   <span class="tag">04 · A contradição</span>
-  <div class="rv"><div class="d big">“Eu defendo a liberdade de expressão…</div><div class="d big" style="color:var(--ac)">…<span class="sk">de quem pensa como eu.</span>”</div></div>
+  <div class="rv"><div class="d big">“Eu defendo a liberdade de expressão…</div><div class="d big" style="color:var(--ac)">…&#8288;<span class="sk">de quem pensa como eu.</span>&#8288;”</div></div>
   <p class="l rv" style="margin-top:2rem">Liberdade que só vale pra quem concorda não é liberdade. É clube com porteiro.</p>
 </section>
 
